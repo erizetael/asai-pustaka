@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>List Book Data</title>
+    <link th:href="@{/styles/book.css}" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Id Buku</th>
+                    <th>Judul</th>
+                    <th>Pengarang</th>
+                    <th>Penerbit</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="data : ${listBookDatas}">
+                    <td th:text="${data.id}"></td>
+                    <td th:text="${data.judul}"></td>
+                    <td th:text="${data.pengarang}"></td>
+                    <td th:text="${data.penerbit}"></td>
+                </tr>
+
+            </tbody>
+        </table>
+        <br />
+        <p><a th:href="@{/showBookForms}">Add Book</a></p>
+
+    </div>
+
+</body>
+</html>

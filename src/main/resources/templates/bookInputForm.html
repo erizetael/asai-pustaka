@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Save Book Form</title>
+</head>
+<body>
+    <h1>Save Book Data</h1>
+    <form action="#" th:action="@{/saveBook}" th:object="${bookModel}" method="post">
+        <input type="text" th:field="*{judul}"
+            placeholder="Judul">
+        <input type="text" th:field="*{pengarang}"
+            placeholder="Pengarang">
+        <input type="text" th:field="*{penerbit}"
+            placeholder="Penerbit">
+
+        <button type="submit">Save Data</button>
+    </form>
+
+</body>
+</html>
